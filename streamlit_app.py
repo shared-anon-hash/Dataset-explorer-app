@@ -24,18 +24,18 @@ df = load_data()
 
 st.sidebar.header("Filters")
 
-dataset_filter = st.sidebar.selectbox(
-    "Dataset",
-    ["All"] + sorted(df["dataset"].unique())
-)
+# dataset_filter = st.sidebar.selectbox(
+#     "Dataset",
+#     ["All"] + sorted(df["dataset"].unique())
+# )
 
 category_filter = st.sidebar.selectbox(
     "Category",
     ["All"] + sorted(df["category"].unique())
 )
 
-if dataset_filter != "All":
-    df = df[df["dataset"] == dataset_filter]
+# if dataset_filter != "All":
+#     df = df[df["dataset"] == dataset_filter]
 
 if category_filter != "All":
     df = df[df["category"] == category_filter]
